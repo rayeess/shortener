@@ -6,7 +6,7 @@
   </head>
   <body>
     <div id="container">
-      <h2>URL-Shortener</h2>
+      <h2>URL Shortener</h2>
 
       @if(Session::has('errors'))
       <h3 class="error">{{$errors->first('link')}}</h3>
@@ -14,7 +14,7 @@
 
       @if(Session::has('link'))
       <h3 class="success">
-        {{ HTML::link(Session::get('link'),'Click here for your shortened URL') }}</h3>
+        {{ "Your shortened URL: "}}{{ HTML::link(Session::get('link')) }}</h3>
       @endif
 
       @if(Session::has('message'))
